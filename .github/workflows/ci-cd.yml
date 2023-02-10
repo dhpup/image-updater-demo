@@ -18,6 +18,14 @@ jobs:
           # fetch-depth: 0 needed for `git rev-list --count` to work properly
           fetch-depth: 0
       -
+        name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v3
+        with:
+          images: dhpup/guestbook
+          tags: |
+            type=sha
+      -
         name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
       -
