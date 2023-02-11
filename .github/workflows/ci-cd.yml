@@ -44,6 +44,10 @@ jobs:
         with:
           go-version: '1.18.0'
       - 
-        name: Push Image
+        name: Build and push
         id: push-image
-        run: make push-latest
+        uses: docker/build-push-action@v3
+        with:
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
