@@ -3,7 +3,7 @@ GIT_COMMIT_TIME=$(shell git show -s --date=format:'%Y%m%d-%H%M' --format='%cd')
 GIT_SHA=$(shell git rev-parse --short HEAD)
 
 IMAGE_TAG?=${GIT_COMMIT_COUNT}-${GIT_SHA}
-IMAGE_REPOSITORY?=ghcr.io/dhpup/guestbook
+IMAGE_REPOSITORY?=ghcr.io/dhpup/image-updater-demo
 
 .PHONY: build
 build:
