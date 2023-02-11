@@ -22,7 +22,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-          images: dhpup/guestbook
+          images: ghcr.io/dhpup/guestbook
           tags: |
             type=ref,event=branch
             type=ref,event=pr
