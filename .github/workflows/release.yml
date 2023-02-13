@@ -37,11 +37,13 @@ jobs:
         uses: actions/setup-go@v2
         with:
           go-version: '1.18.0'
-      - name: Set Tag
+      - 
+        name: Set Tag
         run: |
           TAG="${GITHUB_REF_NAME:1}"
           echo "TAG=${TAG}" >> $GITHUB_ENV
           echo "RELEASE_TAG=${TAG}" >> $GITHUB_ENV
+      -  
         name: Build and push
         id: push-image
         uses: docker/build-push-action@v3
