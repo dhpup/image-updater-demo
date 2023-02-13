@@ -51,4 +51,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: ${{ RELEASE_TAG }}
+          tags: ${{ env.RELEASE_TAG }}
