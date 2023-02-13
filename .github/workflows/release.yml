@@ -5,13 +5,9 @@ on:
     types:
       - published
 
-env:
-  GOPRIVATE: "github.com/dhpup"
-
 jobs:
   release:
     name: Release
-    if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
     outputs:
       image: ${{ steps.push-image.outputs.image }}
@@ -55,4 +51,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: ${{ env.RELEASE_TAG }}
+          tags: ${{ RELEASE_TAG }}
