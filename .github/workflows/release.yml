@@ -50,6 +50,7 @@ jobs:
         id: push-image
         uses: docker/build-push-action@v3
         with:
-          context: .
           push: true
           tags: ${{ env.RELEASE_TAG }}
+          secrets: |
+            GIT_AUTH_TOKEN=${{ secrets.PKG_PAT }}
