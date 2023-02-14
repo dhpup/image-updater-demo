@@ -51,4 +51,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: ${{ env.RELEASE_TAG }}
+          tags: ghcr.io/dhpup/guestbook:${{ env.RELEASE_TAG }}
