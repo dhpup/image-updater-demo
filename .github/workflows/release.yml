@@ -52,4 +52,3 @@ jobs:
         with:
           push: true
           tags: ${{ env.RELEASE_TAG }}
-          labels: ${{ steps.meta.outputs.labels }}
